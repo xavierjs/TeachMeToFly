@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript'>
+var width=12;
+
+var main=function() {
+  var i, h, checkbox, id, mainDiv=document.getElementById("zou");
+  for (h=0; h<8; h++) {
+    for (i=0; i<width; i++) {     
+	  id='zou_'+i+'_'+h;	
+	  checkbox=document.createElement("input");
+	  checkbox.type="checkbox";
+	  checkbox.id=id;
+	  checkbox.onchange=refresh;
+	  if (i==0 || i==width-1) checkbox.checked=true;	
+	  mainDiv.appendChild(checkbox);
+    }
+    mainDiv.appendChild(document.createElement("br"));
+  }
+
+}
+
+var refresh=function() {
+  var i, h, checkbox, id, result="", bin, dec, hex;
+    for (i=0; i<width; i++) { 
+      bin="";
+      for (h=0; h<8; h++) {	
+	id='zou_'+i+'_'+h;	
+	checkbox=document.getElementById(id).checked;
+	bin+=(checkbox)?"1":"0";
+      }
+      dec=parseInt(bin, 2);
+      hex=dec.toString(16).toUpperCase();
+      if (hex.length==1) hex="0"+hex;
+      result+=hex+" ";
+  }
+  document.getElementById("result").value=result+"\\";
+  
+}
+
+</script>
+</head>
+<body onload='main()'>
+  <form>    
+    <div id='zou'>
+    </div><br/>
+    Result : <input type='text' id='result' style="width: 300px; height: 20px;">
+  </form>
+</body>
+</html>
