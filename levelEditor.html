@@ -32,8 +32,8 @@ var refresh=function() {
       }
       dec=parseInt(bin, 2);
       hex=dec.toString(16).toUpperCase();
-      if (hex.length==1) hex="0"+hex;
-      result+=hex+" ";
+      if (hex.length==1) hex=hex+"0";
+      result+=hex.charAt(1)+hex.charAt(0)+" ";
   }
   document.getElementById("result").value=result+"\\";
   

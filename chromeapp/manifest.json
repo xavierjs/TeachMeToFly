@@ -1,0 +1,20 @@
+{
+  "name": "Teach me to fly",
+  "description": "Teach Tux, the Linux penguin, how to fly with its brand new wingsuit !",
+    "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "version": "1.0",
+  "app": {
+    "urls": [
+      "http://www.spacegoo.com/wingsuit"
+    ],
+    "launch": {
+      "web_url": "http://www.spacegoo.com/wingsuit"
+    }
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

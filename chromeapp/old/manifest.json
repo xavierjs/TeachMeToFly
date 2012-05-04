@@ -1,0 +1,9 @@
+ {
+  "name": "Teach me to fly",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Teach Tux, the Linux penguin, how to fly with its brand new wingsuit !",
+  "icons": { "16": "images/icons/icon16.png",
+           "48": "images/icons/icon48.png",
+          "128": "images/icons/icon128.png" }
+}
